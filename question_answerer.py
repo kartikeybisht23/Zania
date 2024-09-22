@@ -23,7 +23,6 @@ class QuestionAnswerer:
                 response = openai.ChatCompletion.create(
                     model="gpt-4o-mini",  # Adjust based on the model available
                     messages=[
-                        {"role": "system", "content": "You are a helpful assistant."},
                         {"role": "user", "content": f"{context}\nAnswer the question: {question}"}
                     ],
                     max_tokens=100
